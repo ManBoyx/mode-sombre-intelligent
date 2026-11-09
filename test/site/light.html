@@ -1,0 +1,14 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Page claire</title>
+<body style="margin:0;background:#ffffff;color:#222;font:28px sans-serif;height:640px">
+<h1 id="h" style="margin:0;padding:20px;color:#222222">Titre sombre sur fond clair</h1>
+<p id="p" style="padding:0 20px;margin:0 0 10px;color:#333333">Du texte de paragraphe.</p>
+<pre id="code" style="margin:20px;padding:20px;background:#101a3a;color:#e6edf7;width:360px;height:60px;font-size:22px">bloc deja sombre</pre>
+<img id="img" width="200" height="120" style="margin:0 20px;display:block" alt="">
+<div id="photo" style="margin:20px;width:200px;height:80px;background-size:cover"></div>
+<script>
+  const c = document.createElement('canvas'); c.width = 200; c.height = 120;
+  const x = c.getContext('2d'); x.fillStyle = '#ff6a00'; x.fillRect(0, 0, 200, 120);
+  document.getElementById('img').src = c.toDataURL('image/png');
+  c.width = 4; c.height = 4; x.fillStyle = '#2ecc71'; x.fillRect(0, 0, 4, 4);
+  document.getElementById('photo').style.backgroundImage = 'url(' + c.toDataURL('image/png') + ')';
+</script></body></html>

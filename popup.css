@@ -1,0 +1,14 @@
+:root { --bg: #fbfaff; --fg: #1d1a2e; --muted: #6b6785; --line: #dcd7ee; --accent: #5b3fd0; --accent-fg: #fff; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #14111f; --fg: #eeebfa; --muted: #a29dbd; --line: #332d52; --accent: #8b74ff; --accent-fg: #120d2b; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; width: 300px; padding: 14px 16px 16px; background: var(--bg); color: var(--fg); font: 14px/1.45 system-ui, sans-serif; }
+h1 { margin: 0 0 10px; font-size: 15px; }
+.switch { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); cursor: pointer; font-weight: 600; }
+.switch input { width: 18px; height: 18px; accent-color: var(--accent); }
+section { padding-top: 12px; }
+.host { font-weight: 600; overflow-wrap: anywhere; }
+.status { margin: 4px 0 12px; color: var(--muted); }
+button { width: 100%; padding: 9px 12px; font: inherit; color: var(--accent-fg); background: var(--accent); border: 0; border-radius: 8px; cursor: pointer; font-weight: 600; }
+button:focus-visible, .switch input:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
